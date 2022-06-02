@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" th:href="@{/profile.css}" />
+</head>
+<body>
+    <div id="profile">
+        <h1>User Infomation</h1>
+        <form method="POST" th:action="@{/userinfo/edit}">
+            <label for="name">Name: </label>
+            <input name="name" type="text" th:value="${session.userName}" readonly />
+            <br>
+            <label for="role">Role: </label>
+            <input name="role" type="text" th:value="${session.role}" readonly />
+            <br>
+            <button><a th:href="@{/profile/changePass}">Change Password</a></button>
+            <button><a th:href="@{/homepage}">Return</a></button>
+        </form>
+    </div>
+</body>

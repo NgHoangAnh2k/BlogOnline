@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" th:href="@{/post.css}" />
+</head>
+
+<body>
+  <h1>POST YOUR BLOG</h1>
+  <div id="menu">
+    <ul>
+
+      <li><a href="homepage" class="menua">
+          <font color="black">Home
+        </a></li>
+      <li><a th:href="@{/homepage/profile}" class="menua">
+          <font color="black">Profile
+        </a></li>
+      <li><a th:href="@{/about}" class="menua">
+          <font color="black">About Us
+        </a></li>
+
+    </ul>
+    <div id="post">
+      <form th:action="@{/post}" th:object="${post}" method="post">
+        <table>
+          <div id="caigiday">
+            <tr>
+              <td>Title:</td>
+              <td><textarea rows="2" cols="50" th:name="title" th:text="${post.title}" required> </textarea></td>
+            </tr>
+            <tr>
+              <td>Content:</td>
+              <td><textarea rows="5" cols="50" th:name="body" th:text="${post.body}" required></textarea></td>
+
+            </tr>
+          </div>
+    </div>
+    </table>
+    Topics:
+    <select name="type">
+      <option value="News">News </option>
+      <option value="Entertainment">Entertainment </option>
+      <option value="Sharing">Sharing </option>
+      <option value="Confidant">Confidant </option>
+      <option value="Technology">Technology </option>
+      <option value="Others">Others </option>
+    </select><br>
+    <br>
+    <button>POST</button>
+    </form>
+</body>
+
+</html>

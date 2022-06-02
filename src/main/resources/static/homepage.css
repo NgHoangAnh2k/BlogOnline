@@ -1,0 +1,85 @@
+body { 
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(120deg, pink, #2980b9);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.2;
+}
+h2,h3 {
+    text-align: center;
+    margin-top: -1em;
+    margin-bottom: 1em;
+}
+h4{
+    margin-left: 2cm;
+    margin-bottom: 0.5em;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+ ul {
+  /* background: #1F568B; */
+  background: lightblue;
+  list-style-type: none;
+  overflow: hidden;
+  width: 100%;
+}
+li {
+  color: #f1f1f1;
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 5px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.anh{
+    text-align: center;
+}
+h1 {
+    padding: 20px 0px;
+    text-align: center;
+}
+input{
+    width: 10cm;
+    height: 0.75cm;
+    background-color: lightblue;
+    margin-left: 20%;
+    border-radius: 0px;
+}
+input[type="submit"]{
+    width: 5em;
+    height: 2em;
+    font-size: 14px;
+    margin-left: 1.5em; 
+    margin-bottom: 0.5em;
+    border-radius: 10px;
+}
+input[type="text"]{
+    width: 25em;
+    height: 2em;
+    font-size: 14px;
+    margin-left: 17.5em; 
+    margin-bottom: 0.5em;
+    border-radius: 10px;
+}
+#search{
+    display: inline-block;
+}
+button{
+    height: 0.75cm;
+    background-color: lightblue;
+    border-radius: 5px;
+    border-style: none;
+}
+.title{
+    border-bottom: 0.5px solid rgba(0, 0, 0,0.3);
+    margin: 4px 4%;
+}
+h4:hover {
+    background-color: rgb(255, 192, 203);
+  }

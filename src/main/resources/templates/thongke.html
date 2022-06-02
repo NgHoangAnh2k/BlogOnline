@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Statistical</title>
+    <link rel="stylesheet" th:href="@{/thongke.css}"/>
+</head>
+
+<body>
+    <h1>Statistical</h1>
+    <table cellpadding="5" border="1">
+        <thead>
+            <tr>
+                <th>Topic</th>
+                <th>Post Amount</th>
+                <th>Comment Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="statistical : ${statisticals}">
+                <td th:text="${statistical.type}"></td>
+                <td th:text="${statistical.post}"></td>
+                <td th:text="${statistical.cmt}"></td>
+            </tr>
+        </tbody>
+    </table>
+    <button><a th:href="@{/homepage}">Home</a></button>
+</body>

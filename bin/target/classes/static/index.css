@@ -1,0 +1,52 @@
+body { 
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(120deg, pink, #2980b9);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#index{
+    width: 400px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 10px;
+    outline: none;
+    margin: 100px auto;
+    margin-top: 5cm;
+    padding: 0px 10px 20px 10px;
+}
+h1{
+    margin-left: 3.5cm;
+}
+#lg{
+    width: 50px;
+    background-color: wheat;
+    border: 1px solid black;
+    border-radius: 10px;
+    outline: none;
+    margin: 10px auto;
+    margin-left: 4.5cm;
+    padding: 0px 10px 10px 10px;
+}
+#crt{
+    width: 160px;
+    background-color: wheat;
+    border: 1px solid black;
+    border-radius: 10px;
+    outline: none;
+    margin: 20px auto;
+    margin-left: 3cm;
+    padding: 0px 10px 10px 10px;
+}
+h1 {
+    margin-left:130px;
+    margin-top: -0.05em;
+    margin-bottom: 0.15em;
+    color: black;
+}
+h2{
+    margin-top: -1.6em;
+    margin-bottom: 2cm;
+}
+a{
+    margin-left: 0.05cm;
+}

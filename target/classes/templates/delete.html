@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html len="en" xmlns=http://www.w3.org/1999/xhtml xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Blog Home</title>
+    <link rel="stylesheet" th:href="@{/delete.css}" />
+</head>
+
+<body>
+    <div id="delete">
+        <h1>Are you sure want to delete this user?</h1>
+        <label class="right">ID:</label>
+        <span th:text="${user.id}"></span><br><br>
+        <label class="right">Name:</label>
+        <span th:text="${user.userName}"></span><br><br>
+        <label class="right">Role:</label>
+        <span th:text="${user.role}"></span><br><br>
+        <button><a th:href="@{/userinfo/confirm?userName=} + ${user.userName}">Yes</a></button>
+        <button><a th:href="@{/userinfo}">No</a></button>
+    </div>
+</body>
+
+</html>

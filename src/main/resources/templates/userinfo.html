@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Quản lý user</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/userinfo.css}" />
+</head>
+
+<body>
+    <h1>Quản lý user</h1>
+    <form action="/searchUser" method="post">
+        <input type="text" name="keyword" placeholder="Search" required>
+        <input type="submit" value="Search">
+    </form>
+    <form method="post" th:action="@{/userinfo}" th:object="${dsUser}">
+
+        <button><a th:href="@{/userinfo/addUser}">Add User</a></button>
+        <button><a th:href="@{/homepage}">Home</a></button>
+        <!-- <a th:href="/statistical"><input type="submit" value="Statistical"></a> -->
+        <table cellpadding="5" border="1">
+            <tr>
+                <td><b>ID</b></td>
+                <td><b>Name</b></td>
+                <td><b>Role</b></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <th:block th:each="user : ${dsUser}">
+                <tr>
+                    <td th:text="${user.id}"></td>
+                    <td th:text="${user.userName}"></td>
+                    <td th:text="${user.role}"></td>
+                    <td><a th:href="@{/userinfo/edit?userName=}+${user.userName}">Edit</a></td>
+                    <td><a th:href="@{/userinfo/delete?userName=}+${user.userName}">Delete</a></td>
+                </tr>
+            </th:block>
+        </table>
+    </form>
+    <br>
+    <form id="thongke" action="/statistical" method="post">
+        <input style="width: 3cm;" type="submit" value="Statistical">
+    </form>
+</body>
+
+</html>

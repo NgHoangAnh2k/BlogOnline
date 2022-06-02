@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html len="en" xmlns=http://www.w3.org/1999/xhtml xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Blog</title>
+	<link rel="stylesheet" th:href="@{/style.css}" />
+</head>
+<style>
+	.register{
+	text-align: center;
+	}
+</style>
+<body>
+	<div class="register">
+    	<h1>Register</h1>
+		<h2>________________________________________</h2>
+    	<h3>Fast and easy</h3>
+		<form method="post" th:action="@{/register}" th:object="${userRegistion}">
+		<label for="userName">Username:</label>
+		<input type="text" name="userName"  placeholder="username" th:value="${userRegistion.userName}" required><br>
+		<label for="password">Password:</label>
+		<input type="password" name="password" placeholder="password" th:value="${userRegistion.password}" required><br>
+		<label for="confirmPassword">Confirm Password:</label>
+		<input type="password" name="confirmPassword" placeholder="password" th:value="${userRegistion.confirmPassword}" required><br>
+		<p th:text = "${msg}"></p><br>
+		<button>Register</button>
+		</form>
+	</div>	
+</body>
+
+</html>

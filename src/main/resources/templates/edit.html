@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html len="en" xmlns=http://www.w3.org/1999/xhtml xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Blog Home</title>
+	<link rel="stylesheet" th:href="@{/edit.css}" />
+</head>
+
+<body>
+	<div id="edit">
+		<h1>Edit</h1>
+		<h2>________________________________</h2>
+		<form method="POST" th:object="${user}" th:action="@{/userinfo/edit}">
+			<label for="id">ID: </label>
+			<input name="id" type="text" th:value="${user.id}" readonly />
+			<br>
+			<label for="name">Name: </label>
+			<input name="name" type="text" th:value="${user.userName}" readonly />
+			<br>
+			<label for="role">Role: </label>
+			<input name="role" type="text" th:value="${user.role}" required />
+			<br>
+			<input type="submit" name="submit" th:value="Update">
+			<button><a th:href="@{/userinfo}">Return</a></button>
+		</form>
+	</div>
+</body>
+
+</html>

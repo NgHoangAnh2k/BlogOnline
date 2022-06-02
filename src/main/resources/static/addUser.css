@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    max-width: 500px;
+    margin: auto;
+    background: linear-gradient(120deg, pink, #2980b9);
+    width: 100vw;
+    height: 100vh;
+}
+#add{
+    width: 400px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 10px;
+    outline: none;
+    margin: 100px auto;
+    margin-top: 3cm;
+    padding: 50px 10px 20px 10px;
+}
+h1 {
+    margin-left:100px;
+    margin-top: -1cm;
+    margin-bottom: 0.3em;
+    color: black;
+}
+h2{
+    margin-top: -1.6em;
+    margin-bottom: 3em;
+}
+label {
+    float: left;
+    width: 7em;
+    margin-bottom: 0.5em;
+}
+input[type="text"]{
+    width: 20em;
+    height: 0.75cm;
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 10px;
+}
+input[type="password"]{
+    width: 20em;
+    height: 0.75cm;
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 10px;
+}
+button {
+    width: 10em;
+    height: 0.75cm;
+    margin-left: 0.5em;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    border-radius: 10px;
+}
+i{
+    margin-left:  7em;
+    color: red;
+}
+br {
+    clear: both;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+input[type="submit"]{
+    width: 10em;
+    height: 0.75cm;
+    margin-left: 3em;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    border-radius: 10px;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/changePass.css}"/>
+</head>
+
+<body>
+    <div id="change">
+    <h1>Change Password</h1>
+    <h2>_______________________________</h2>
+
+        <form method="post" th:action="@{/profile/changePass}">
+        <label for="password">Password:</label>
+        <input type="password" name="password"  placeholder="password" required><br>
+        <label for="newpassword">New Password :</label>
+        <input type="password" name="newpassword" placeholder="password" required><br>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" name="confirmPassword" placeholder="password" required><br>
+        <p th:text = "${msg}"></p><br>
+        <button>Ok</button>
+        </form>
+    </div>
+</body>
+
+</html>

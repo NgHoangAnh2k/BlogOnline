@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title th:text="${post.title}"></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/detail.css}"/>
+</head>
+
+<body>
+    <h1 th:text="${post.title}"></h1>
+    <b><p th:text="'By: '+ ${post.creator.userName}"></p></b>
+    <hr>
+    <p th:text="${post.body}"></p>
+    <hr>
+    <h4>Comments:</h4>
+    <th:block th:each="comment : ${listComment}">
+        <b style="color: red;" th:text="${comment.creator.userName}"></b>
+        <p th:text="${comment.text}"></p>
+        <hr>
+    </th:block>
+    <form th:action="@{/homepage/detail}" method="post" th:object="${comment}">
+        <input type="hidden" name="postID" th:value="${post.id}">
+        <textarea th:name="text" cols="100" rows="3" placeholder="Write comment..." th:text="${comment.text}" required></textarea><br>
+        <button>Send</button>
+        <button><a th:href="@{/homepage}">Return</a></button>
+    </form>
+</body>
+
+</html>

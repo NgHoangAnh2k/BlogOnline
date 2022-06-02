@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html len="en" xmlns=http://www.w3.org/1999/xhtml xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Blog Home</title>
+	<link rel="stylesheet" th:href="@{/index.css}"/>
+</head>
+<style>
+
+h1,h2,h3,button {
+	text-align: center;
+}
+.blog{
+    text-align: center;
+
+}
+</style>
+<body>
+<h1>My Blog</h1>
+<h2>Post content, show your passion your way</h2>
+<h3> Create unique and stunning blogs easily</h3>
+<div class="blog">
+	<img src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2022/03/what-is-a-blog.png" alt="ảnh">
+	<br>
+	<button><a th:href="@{/login}"><span>Post Blog</span></a></button>
+</div>
+</body>
+
+</html>

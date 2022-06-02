@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html len="en" xmlns=http://www.w3.org/1999/xhtml xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Blog Home</title>
+    <link rel="stylesheet" th:href="@{/homepage.css}" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="logo">
+                <h1>BLOG</h1>
+            </div>
+            <div id="menu">
+                <ul>
+
+                    <li><a th:href="@{/post}" class="menua">
+                            <font color="black">Post Blog
+                        </a></li>
+                    <li><a th:href="@{/homepage/profile}" class="menua">
+                            <font color="black">Profile
+                        </a></li>
+                    <li><a th:href="@{/about}" class="menua">
+                            <font color="black">About Us
+                        </a></li>
+                    <li th:if="${session.role=='Admin'}"><a th:href="@{/userinfo}" class="menua">
+                            <font color="black">Admin
+                        </a></li>
+                    <form id="search" action="/search" method="post">
+                        <input type="text" name="keyword" placeholder="Search">
+                        <input type="submit" value="Search">
+                    </form>
+                    <li><a th:href="@{/logout}" class="menua">
+                            <font color="black">Log Out
+                        </a></li>
+                </ul>
+
+            </div>
+        </div>
+        <br><br><br><br>
+        <div id="page">
+
+            <div id="content">
+                <h2>Blog helps you share about your life and connect to many people.</h2>
+
+
+            </div>
+            <div class="content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-8">
+                            <th:block th:each="post : ${listPost}">
+                                <div class="title">
+                                    <h4><a th:href="@{/homepage/detail?postID=}+${post.id}" th:text="${post.title}"></a>
+                                    </h4>
+                                </div>
+                            </th:block>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
+
+</html>
